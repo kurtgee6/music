@@ -1,0 +1,11 @@
+{% if all_albums %}
+    <ul>
+        <!-- Django for loop -->
+        {% for album in all_albums %}
+        <li><a href="/music/{{ album.id }}/">{{ album.album_title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p> You dont't have any albums </p>
+{% endif %}
+    
